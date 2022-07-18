@@ -1,0 +1,19 @@
+{
+  "name": "email-gather",
+  "version": "1.0.0",
+  "description": "",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "serverless-offline": "^8.8.0"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.1168.0",
+    "google-auth-library": "^8.1.0",
+    "googleapis": "^100.0.0"
+  }
+}
