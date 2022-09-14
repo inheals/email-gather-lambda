@@ -20,11 +20,12 @@ module.exports.initialize = (token) => {
             let oAuth2Client = await this.getOAuthClient()
             oAuth2Client.setCredentials(token);
             const gmail = google.gmail({version: 'v1', auth: oAuth2Client});
+            console.log('gmail', gmail)
             resolve(gmail)
 
         }catch(err){
             console.log(err)
-            reject(err)
+            reject(new Error(err))
 
         }
     })
@@ -81,6 +82,7 @@ module.exports.getUserInfoFromCred = (credentials) =>{
         version:'v2'
        })
        oAuth2.userinfo.get((err,data)=>{
+        console.log(err)
         if(err) reject(err)
         else resolve(data.data)
        })
