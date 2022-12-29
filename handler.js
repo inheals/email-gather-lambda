@@ -23,7 +23,7 @@ module.exports.hello = async (event,context,callback) => {
   //       "token_type": "Bearer"
   //      }
   //   ],
-  //   usedApps: [ 'simpl' ]
+  //   usedApps: [ 'simpl','Flipkart Pay Later','Amazon Pay Later' ]
   // }
   
   //JSON.parse(event.body)
@@ -44,7 +44,7 @@ module.exports.hello = async (event,context,callback) => {
       due:'Your Simpl bill of is due',
       paid:'has been received for your Simpl account on'
     },
-    freecharge:{
+    'Freecharge Pay Later':{
       due:'Thank you for using Freecharge Pay Later. Your bill details are given below.',
       paid:'Freecharge Pay Later Bill Payment Successful!'
     },

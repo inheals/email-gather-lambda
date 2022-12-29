@@ -7,12 +7,14 @@ class CheckGitBranchBeforeDeploy {
       deploy: {
         lifecycleEvents: [
           'resources',
+          'deploy'
         ]
       },
     };
 
     this.hooks = {
       'before:deploy:resources': () => checkGitBranch(serverless),
+      'deploy: deploy':()=> console.log('check'),
     }
   }
 }
